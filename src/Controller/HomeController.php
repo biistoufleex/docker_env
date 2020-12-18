@@ -9,7 +9,14 @@ class HomeController
     public function index(): Response
     {
         return new Response(
-            'yo !'
+            'index funtion'
+        );
+    }
+
+    public function second(): Response
+    {
+        return new Response(
+            'second funtion'
         );
     }
 }
