@@ -1,0 +1,10 @@
+docker images
+docker ps 
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+docker rmi $(docker images -a -q)
+docker-compose build
+docker-compose up -d
+docker-compose stop
+docker-compose exec php composer install
+docker-compose exec php php bin/console doctrine:schema:create
